@@ -33,3 +33,14 @@ SELECT UserId, RoleId, r.Name
 FROM [stg.test.com].sec.AspNetUserRoles as ur
 inner join [stg.test.com].sec.AspNetroles as r on ur.RoleId = r.id
 where UserId = 'apikey'
+
+-----------------------------------------------------
+
+select 	fields.Name as name,	
+		fields.id as id,
+		fields.cropid as cropid,
+		Users.CompanyId as CompanyId
+from fields
+inner join users on fields.UserId = users.Id 
+inner join companies on users.CompanyId = companies.id
+where users.CompanyId = 32 and fields.IsArchived = 0

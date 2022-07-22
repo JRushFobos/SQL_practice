@@ -44,3 +44,5 @@ from fields
 inner join users on fields.UserId = users.Id 
 inner join companies on users.CompanyId = companies.id
 where users.CompanyId = 32 and fields.IsArchived = 0
+
+-----------------------------------------------------
